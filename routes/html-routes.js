@@ -6,6 +6,7 @@ module.exports = function (app) {
     app.get("/", function (req, res) {
         var inputs = [];
         var inputID = 0;
+        
         for (var i = 0; i < story.length; i++) {
             // If this character isn't a '<', skip it
             if (story[i] !== "<")
