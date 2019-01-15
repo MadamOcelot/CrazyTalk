@@ -1,4 +1,2 @@
--- Drops the blogger if it exists currently --
-DROP DATABASE IF EXISTS fillers;
--- Creates the "fillers" database --
-CREATE DATABASE fillers;
+DROP DATABASE IF EXISTS crazytalk_db;
+CREATE DATABASE crazytalk_db;
