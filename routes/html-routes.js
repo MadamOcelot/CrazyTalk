@@ -4,7 +4,7 @@ module.exports = function (app) {
     app.get("/", function (req, res) {
         tables.stories.findAll({}).then(function (data) {
             // get id of row in DB
-            var storyID = Math.floor(Math.random() * data.length);
+            var storyID = data[Math.floor(Math.random() * data.length)].id;
 
             tables.stories.findOne({
                 where: { id: storyID }
