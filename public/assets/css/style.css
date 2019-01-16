@@ -22,9 +22,9 @@ body {
     }
   }
 
-#header {
+.header {
     text-align:center;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 #crazyHead {
     font-size: 355%;
@@ -160,12 +160,22 @@ input {
     font-weight: bolder;
     text-shadow: 3px 3px black;
     color: white;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 1.5;
 }
-
+  
 button {
     line-height: 1.5;
+    font-family: 'FifteenTwentyRegular'; 
+    position: absolute;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 1%;
+    top: 126%;
+    left: 5%;
+    box-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ff00 , 0 0 70px #00ff00 , 0 0 80px #00ff00 , 0 0 100px #00ff00 ;
+    background-color: black!important;
+    border-color: black!important;
 
 }
 
