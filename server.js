@@ -13,6 +13,10 @@ app.set("view engine", "handlebars");
 require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
 
-app.listen(PORT, function () {
-    console.log("App listening at http://localhost:" + PORT);
-});
+if (process.argv[2] === "init") {
+    require("./init");
+} else {
+    app.listen(PORT, function () {
+        console.log("App listening at http://localhost:" + PORT);
+    });
+}
