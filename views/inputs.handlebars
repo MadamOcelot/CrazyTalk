@@ -1,0 +1,40 @@
+<div class="container bg">
+
+    <div class="row">
+        <div class="center col-sm-12" id="header">
+            <h1 id="crazyHead">Crazy</h1><h1 id="talk">Talk</h1>
+
+        </div>
+    </div>
+<br>
+<br>
+<div class="content">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <br>
+            <div class="row" id="bar">
+            <h2 class="normie1">Enter some</h2> <h2 id="crazy">CrAzY</h2><h2 class="normie2">Words!</h2>
+            </div>
+            <form id="forms" action="/story" method="POST">
+                    <input type="hidden" name="storyID" value="{{storyID}}">
+                    <input type="hidden" name="inputCount" value="{{inputCount}}">
+                    {{#each input}}
+                    {{this.type}}: <input type="text" name="input{{this.id}}">
+                    <br>
+                    {{/each}}
+            </form>
+
+        </div>
+
+
+
+
+    </div>
+
+
+        <button class="btn-primary" type="submit">Submit Words</button>
+
+</div>
+
+</div>
