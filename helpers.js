@@ -8,17 +8,18 @@ module.exports.getRandomStory = function (cb) {
             cb(randomStoryID, story);
         });
     });
-};
+}
 
-module.exports.getStoryWithID = function (id, cb, error) {
+module.exports.getStoryWithID = function (id, cb, errorCb) {
     tables.stories.findOne({
         where: { id: id }
     }).then(function (data) {
         cb(data.story);
     }).catch(function (err) {
-        error(err);
+        if (errorCb !== undefined)
+            errorCb(err);
     })
-};
+}
 
 // returns an array containing objects of the form:
 // {id, type}
@@ -45,7 +46,7 @@ module.exports.getInputsArray = function (storyContent) {
         inputNum++;
     }
     return inputs;
-};
+}
 
 module.exports.replaceStoryInputs = function(story, inputs, cb, errorCb) {
     var completeStory = "";
