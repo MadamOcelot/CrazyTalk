@@ -100,7 +100,7 @@ module.exports = function (app) {
             });
 
             tables.entries.insertOrUpdate({
-                storyID: req.body.storyID,
+                storyId: req.body.storyID,
                 username: "",
                 entries: JSON.stringify(inputs)
             });
