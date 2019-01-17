@@ -63,4 +63,23 @@ module.exports = function (app) {
 
         res.redirect("/");
     });
+
+    app.get("/newStory", function (req, res) {
+        res.render("newStory");
+    });
+
+    app.post("/saveNewStory", function (req, res) {
+        if (!req.body.story || req.body.story.length > 750)
+        {
+            res.status(400);
+            res.end();
+            return;
+        }
+
+        tables.stories.insertOrUpdate({
+            story: req.body.story
+        });
+
+        res.redirect("/");
+    })
 }
