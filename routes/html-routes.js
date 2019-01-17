@@ -96,17 +96,24 @@ module.exports = function (app) {
             }
 
             res.render("story", {
+                storyID: req.body.storyID,
+                entries: JSON.stringify(inputs),
                 story: completeStory
-            });
-
-            tables.entries.insertOrUpdate({
-                storyId: req.body.storyID,
-                username: "",
-                entries: JSON.stringify(inputs)
             });
         }).catch(function (err) {
             res.status(400);
             res.end();
         });
+    });
+
+    app.post("/saveStory", function (req, res) {
+        // TODO: add validation
+        tables.entries.insertOrUpdate({
+            storyId: req.body.storyID,
+            username: req.body.username,
+            entries: req.body.entries
+        });
+
+        res.redirect("/");
     });
 }
