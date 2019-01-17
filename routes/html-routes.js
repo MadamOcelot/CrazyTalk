@@ -98,6 +98,12 @@ module.exports = function (app) {
             res.render("story", {
                 story: completeStory
             });
+
+            tables.entries.insertOrUpdate({
+                storyID: req.body.storyID,
+                username: "",
+                entries: JSON.stringify(inputs)
+            });
         }).catch(function (err) {
             res.status(400);
             res.end();
