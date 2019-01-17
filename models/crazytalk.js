@@ -8,10 +8,7 @@ stories.sync();
 
 const entries = connection.define("entries", {
     storyId: Sequelize.INTEGER,
-<<<<<<< HEAD
-=======
     username: Sequelize.STRING,
->>>>>>> origin/dev
     entries: Sequelize.TEXT
 });
 entries.sync();
