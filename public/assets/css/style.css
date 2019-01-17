@@ -201,3 +201,84 @@ input {
     float: right;
     transform: rotateY(180deg);
 }
+
+@media only screen and (max-width: 991 px){
+    .words{
+         width: 33%;
+    }
+    #smileys{
+         width: 30%;
+         height: 76%;
+}
+#submitButton{
+    top: 100%;
+}
+}
+
+@media only screen and (max-width: 772 px){
+    #smileys{
+        width: 25%;
+        height: 40%;
+    }
+    .normie1{
+        font-size: 150%;
+    }
+    .normie2{
+        font-size: 150%;
+        padding-left: 3%;
+    }
+    #crazy{
+        font-size: 117%;
+    }
+    .words{
+        font-size: 84%;
+    }
+    #submitButton{
+        left: 33%;
+    }
+}
+
+@media only screen and (max-width: 520 px){
+    .words{
+        width: 39%;
+        font-size:78%;
+    }
+    .input{
+        width: 76%;
+    }
+    #submitButton{
+        top: 110%;
+    }
+}
+
+@media only screen and (max-width: 492 px){
+    .normie1, .normie2 {
+        font-size: 130%;
+    }
+}
+
+@media only screen and (max-width: 467 px){
+    #smileys{
+        width: 18%;
+        height: 59%;
+    }
+}
+
+@media only screen and (max-width: 360 px){
+    #crazyHead{
+        font-size: 263%;
+    }
+    #talk{
+        font-size: 263%;
+    }
+    #smileys{
+        visibility: hidden;
+    }
+    #crazy{
+        font-size: 93%;
+        margin-left: 6px;
+    }
+    .normie1, .normie2{
+        font-size: 100%
+    }
+}
