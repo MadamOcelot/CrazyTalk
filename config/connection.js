@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 
 if (process.env.JAWSDB_URL) {
-    module.exports = new Sequelize(JAWSDB_URL);
+    module.exports = new Sequelize(process.env.JAWSDB_URL);
 }
 else {
     module.exports = new Sequelize("crazytalk_db", "root", "root", {
