@@ -196,16 +196,12 @@ input {
 }
 
 #smileys {
-    width: 250px;
-    height: 250px;
+    width: 23%;
+    height: 100%;
     float: right;
     transform: rotateY(180deg);
 }
 @media only screen and (max-width: 1199px){
-    #smileys{
-        width: 213px;
-        height:213px;
-    }
     .words{
         font-size: 90%;
     }
@@ -213,10 +209,11 @@ input {
 @media only screen and (max-width: 991px){
     .words{
          width: 33%;
+         font-size: 100%;
     }
     #smileys{
-         width: 30%;
-         height: 76%;
+         width: 23%;
+         height: 84%;
 }
 #submitButton{
     top: 100%;
@@ -224,10 +221,6 @@ input {
 }
 
 @media only screen and (max-width: 772px){
-    #smileys{
-        width: 25%;
-        height: 40%;
-    }
     .normie1{
         font-size: 150%;
     }
@@ -239,7 +232,7 @@ input {
         font-size: 117%;
     }
     .words{
-        font-size: 84%;
+        font-size: 85%;
     }
     #submitButton{
         left: 33%;
@@ -256,6 +249,10 @@ input {
     }
     #submitButton{
         top: 110%;
+    }
+    #smileys{
+        width: 20%;
+    height: 84%;
     }
 }
 
@@ -288,5 +285,16 @@ input {
     }
     .normie1, .normie2{
         font-size: 100%
+    }
+    #submitButton {
+        top: 100%;
+        left: 22%;
+    }
+    .words {
+        width: 79%;
+        font-size: 100%;
+    }
+    body {
+        height: 100%;
     }
 }
