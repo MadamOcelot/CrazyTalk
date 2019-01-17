@@ -171,8 +171,8 @@ input {
     top: 126%;
     left: 42%;
     text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ff00 , 0 0 35px #00ff00 , 0 0 40px #00ff00 , 0 0 50px #00ff00 ;
-    background-color: black!important;
-    border-color: black!important;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 #saveButton {
@@ -185,8 +185,8 @@ input {
     top: 76%;
     left: 23%;
     text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ff00 , 0 0 35px #00ff00 , 0 0 40px #00ff00 , 0 0 50px #00ff00 ;
-    background-color: black!important;
-    border-color: black!important;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 #userNameBox {
