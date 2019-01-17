@@ -3,7 +3,7 @@ const tables = require("../models/crazytalk");
 module.exports = function (app) {
     app.get("/", function (req, res) {
         tables.stories.findAll({}).then(function (data) {
-            // get id of row in DB
+            // get id of random row in DB
             var storyID = data[Math.floor(Math.random() * data.length)].id;
 
             tables.stories.findOne({
@@ -32,7 +32,6 @@ module.exports = function (app) {
                         id: inputNum,
                         type: input
                     });
-
                     inputNum++;
                 }
 
