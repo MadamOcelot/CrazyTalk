@@ -3,8 +3,8 @@ const tables = require("../models/crazytalk");
 module.exports = function (app) {
     app.get("/", function (req, res) {
         tables.stories.findAll({}).then(function (data) {
-            // get id of row in DB
-            var storyID = Math.floor(Math.random() * data.length);
+            // get id of random row in DB
+            var storyID = data[Math.floor(Math.random() * data.length)].id;
 
             tables.stories.findOne({
                 where: { id: storyID }
@@ -32,7 +32,6 @@ module.exports = function (app) {
                         id: inputNum,
                         type: input
                     });
-
                     inputNum++;
                 }
 
@@ -97,11 +96,24 @@ module.exports = function (app) {
             }
 
             res.render("story", {
+                storyID: req.body.storyID,
+                entries: JSON.stringify(inputs),
                 story: completeStory
             });
         }).catch(function (err) {
             res.status(400);
             res.end();
         });
+    });
+
+    app.post("/saveStory", function (req, res) {
+        // TODO: add validation
+        tables.entries.insertOrUpdate({
+            storyId: req.body.storyID,
+            username: req.body.username,
+            entries: req.body.entries
+        });
+
+        res.redirect("/");
     });
 }
