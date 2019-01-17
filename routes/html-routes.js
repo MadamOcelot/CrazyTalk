@@ -1,45 +1,14 @@
 const tables = require("../models/crazytalk");
+const helpers = require("../helpers");
 
 module.exports = function (app) {
     app.get("/", function (req, res) {
-        tables.stories.findAll({}).then(function (data) {
-            // get id of random row in DB
-            var storyID = data[Math.floor(Math.random() * data.length)].id;
-
-            tables.stories.findOne({
-                where: { id: storyID }
-            }).then(function (storyData) {
-
-                var story = storyData.story;
-
-                // build "inputs"
-                var inputs = [];
-                var inputNum = 0;
-                for (var i = 0; i < story.length; i++) {
-                    // If this character isn't a '<', skip it
-                    if (story[i] !== "<")
-                        continue;
-
-                    // get the input type (the text between angle brackets)
-                    i++;
-                    var input = "";
-                    while (story[i] !== ">") {
-                        input += story[i];
-                        i++;
-                    }
-
-                    inputs.push({
-                        id: inputNum,
-                        type: input
-                    });
-                    inputNum++;
-                }
-
-                res.render("inputs", {
-                    storyID: storyID,
-                    input: inputs,
-                    inputCount: inputNum
-                });
+        helpers.getRandomStory(function (storyID, story) {
+            var inputs = helpers.getInputsArray(story);
+            res.render("inputs", {
+                storyID: storyID,
+                input: inputs,
+                inputCount: inputs.length
             });
         });
     });
@@ -53,12 +22,7 @@ module.exports = function (app) {
             return;
         }
 
-        tables.stories.findOne({
-            where: { id: req.body.storyID }
-        }).then(function (data) {
-            var story = data.story;
-
-            // grab the inputs
+        helpers.getStoryWithID(req.body.storyID, function (story) {
             var inputs = [];
             for (var i = 0; i < inputCount; i++)
                 inputs.push(req.body["input" + i]);
@@ -72,35 +36,18 @@ module.exports = function (app) {
                 }
             }
 
-            var completeStory = "";
-            var curInput = 0;
-            for (var i = 0; i < story.length; i++) {
-                if (story[i] !== "<") {
-                    completeStory += story[i];
-                    continue;
-                }
-
-                // skip until '>'
-                while (story[i] !== ">")
-                    i++;
-
-                // add the input
-                completeStory += inputs[curInput];
-                curInput++;
-
-                if (curInput > inputs.length) {
-                    res.status(400);
-                    res.end();
-                    return;
-                }
-            }
-
-            res.render("story", {
-                storyID: req.body.storyID,
-                entries: JSON.stringify(inputs),
-                story: completeStory
+            // render story
+            helpers.replaceStoryInputs(story, inputs, function (completeStory) {
+                res.render("story", {
+                    storyID: req.body.storyID,
+                    entries: JSON.stringify(inputs),
+                    story: completeStory
+                });
+            }, function () {
+                res.status(400);
+                res.end();
             });
-        }).catch(function (err) {
+        }, function (err) {
             res.status(400);
             res.end();
         });
