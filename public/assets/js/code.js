@@ -1,6 +1,4 @@
-
 $('input').keyup(function () {
-
     var empty = false;
     $('input').each(function () {
         if ($(this).val() == '') {
@@ -8,10 +6,12 @@ $('input').keyup(function () {
         }
     });
 
-    if (empty) {
+    if (empty)
         $('button').attr('disabled', 'disabled');
-    } else {
+    else
         $('button').removeAttr('disabled');
-    }
 });
 
+$("#speak").click(function () {
+    speechSynthesis.speak(new SpeechSynthesisUtterance($("#story p").text()));
+});
