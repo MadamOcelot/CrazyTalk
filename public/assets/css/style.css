@@ -157,7 +157,7 @@ input {
     font-weight: bolder;
     text-shadow: 3px 3px black;
     color: white;
-    font-size: 30px;
+    font-size: 100%;
     line-height: 1.5;
 }
   
@@ -298,9 +298,13 @@ input {
     }
     .words {
         width: 79%;
-        font-size: 100%;
+        font-size: 103%;
     }
     body {
         height: 100%;
+    }
+    #saveButton {
+        top: 88%;
+        left: 30%;
     }
 }
