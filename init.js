@@ -31,4 +31,12 @@ tables.stories.bulkCreate([
     { story: stories[6] },
     { story: stories[7] },
     { story: stories[8] },
+    { story: stories[9] },
+    { story: stories[10] },
+    { story: stories[11] },
+    { story: stories[12] },
+    { story: stories[13] },
+    { story: stories[14] },
+    { story: stories[15] },
+    { story: stories[16] }
 ]);
