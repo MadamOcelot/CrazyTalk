@@ -25,7 +25,7 @@
                     <input type="hidden" name="inputCount" value="{{inputCount}}">
                     {{#each input}}
                     <div class="words">
-                        {{this.type}}: <input type="text" name="input{{this.id}}">
+                        {{this.type}}: <input class="inField" type="text" name="input{{this.id}}" id="input{{this.id}}">
                         <br>
                     </div>
                     {{/each}}
