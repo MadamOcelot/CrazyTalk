@@ -237,6 +237,9 @@ input {
     #submitButton{
         left: 33%;
     }
+    input{
+        width: 76%;
+    }
 }
 
 @media only screen and (max-width: 520px){
@@ -244,7 +247,7 @@ input {
         width: 39%;
         font-size:78%;
     }
-    .input{
+    input{
         width: 76%;
     }
     #submitButton{
@@ -283,7 +286,10 @@ input {
         font-size: 93%;
         margin-left: 6px;
     }
-    .normie1, .normie2{
+    .normie1{
+        font-size: 100%
+    }
+    .normie2{
         font-size: 100%
     }
     #submitButton {
