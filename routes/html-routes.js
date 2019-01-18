@@ -81,5 +81,19 @@ module.exports = function (app) {
         });
 
         res.redirect("/");
-    })
+    });
+
+    app.get("/test", function (req, res) {
+        helpers.getStoryWithID(1, function (story) {
+            var inputs = helpers.getInputsArray(story);
+            res.render("inputs", {
+                storyID: 1,
+                input: inputs,
+                inputCount: inputs.length
+            });
+        }, function (err) {
+            res.status(500);
+            res.end();
+        });
+    });
 }
