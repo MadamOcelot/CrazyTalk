@@ -241,13 +241,14 @@ input {
     #smileys{
          width: 23%;
          height: 84%;
-}
-#submitButton{
-    top: 100%;
-}
-#saveButton {
-    left: 40%;
-}
+    }
+    #submitButton{
+        top: 125%;
+        left: 45%;
+    }
+    #saveButton {
+        left: 40%;
+    } 
 }
 
 @media only screen and (max-width: 772px){
@@ -291,7 +292,7 @@ input {
     }
     #smileys{
         width: 20%;
-    height: 84%;
+        height: 84%;
     }
 }
 
