@@ -1,5 +1,4 @@
 <div class="container bg">
-
     <div class="row">
         <div class="center col-sm-12 header">
             <h1 id="crazyHead">Crazy</h1>
@@ -9,14 +8,20 @@
     </div>
 
     <div class="row" id="story">
-        <p>{{story}}</p>
+        <div class="col-12">
+            <p>{{story}}</p>
+        </div>
     </div>
-        <div class="row">
+
+    <div class="row">
         <form action="/saveStory" method="POST">
             <input name="entries" type="hidden" value="{{entries}}">
             <input name="storyID" type="hidden" value="{{storyID}}">
             <input id="userNameBox" placeholder="Enter Username Here!" name="username" type="text">
             <button id="saveButton" type="submit" disabled="disabled">SAVE</button>
         </form>
+        <button id="speak">SPEAK</button>
     </div>
-</div>>
+    <div class="row">
+    </div>
+</div>
