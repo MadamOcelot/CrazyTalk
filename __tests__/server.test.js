@@ -1,8 +1,5 @@
 var Nightmare = require("nightmare");
-var server = require('../server.js')
 var nightmare = Nightmare({ show: true });
-
-describe(
   nightmare
   .goto("http://localhost:8080/test")
   .type("#input0", "Goku")
