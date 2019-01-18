@@ -1,37 +1,45 @@
 var Nightmare = require("nightmare");
-
+var server = require('../server.js')
 var nightmare = Nightmare({ show: true });
 
-nightmare
+describe(
+  nightmare
   .goto("http://localhost:8080/test")
-  .type("#input0", "test")
+  .type("#input0", "Goku")
   .wait(500)
-  .type("#input1", "test")
+  .type("#input1", "hardened")
   .wait(500)  
-  .type("#input2", "test")
+  .type("#input2", "K-Mart")
   .wait(500)
-  .type("#input3", "test")
+  .type("#input3", "wanderlust")
   .wait(500)
-  .type("#input4", "test")
+  .type("#input4", "Pokeball")
   .wait(500)
-  .type("#input5", "test")
+  .type("#input5", "stupidly")
   .wait(500)
-  .type("#input6", "test")
+  .type("#input6", "thick")
   .wait(500)
-  .type("#input7", "test")
+  .type("#input7", "boil")
   .wait(500)
-  .type("#input8", "test")
+  .type("#input8", "screwed")
   .wait(500)
-  .type("#input9", "test")
+  .type("#input9", "rubber")
   .wait(500)
-  .type("#input10", "test")
+  .type("#input10", "42")
   .wait(500)
-  .type("#input11", "test")
+  .type("#input11", "wanted")
+  .screenshot("UserSave.png")
   .click("#submitButton")
+  .wait(1000)
+  .type("#userNameBox", "New User")
+  .screenshot("BeforeSave.png")
+  .click("#saveButton")
+  .wait(1000)
+  .screenshot("AfterSave.png")
   .wait(3000)
   .end()
-  .then(function(result) {
-    console.log(result);
+  .then(function() {
+    console.log("Took a screenshot of the inputs, resulting story and of the return page");
   })
   .catch(function(error) {
     console.error("Search failed:", error);
