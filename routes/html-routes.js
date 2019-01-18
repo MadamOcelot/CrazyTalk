@@ -96,4 +96,25 @@ module.exports = function (app) {
             res.end();
         });
     });
+
+    app.get("/viewRandomStory", function (req, res) {
+        helpers.getRandomEntry(function (entry) {
+            helpers.getStoryWithID(entry.storyId, function (story) {
+                helpers.replaceStoryInputs(story, JSON.parse(entry.entries), function (completeStory) {
+                    res.render("randomStory", {
+                        story: completeStory
+                    });
+                }, function () {
+                    res.status(500);
+                    res.end();
+                });
+            }, function (err) {
+                res.status(500);
+                res.end();
+            });
+        }, function (err) {
+            res.status(400);
+            res.end();
+        })
+    });
 }
