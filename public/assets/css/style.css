@@ -175,6 +175,39 @@ input {
     border-color: transparent;
 }
 
+#newStoryTextField {
+    margin: 12.5%;
+    font-family: 'FifteenTwentyRegular';
+    padding-top: 2%;
+    font-weight: bolder;
+}
+
+#example {
+    font-family: 'FifteenTwentyRegular'; 
+    font-weight: normal; 
+    font-style: normal; 
+    font-weight: bolder;
+    margin-left: 5%;
+    color: white;
+    font-size: 100%;
+    line-height: 2;
+
+}
+
+#newStorySubmit {
+    top: 75%;
+    line-height: 1.5;
+    font-family: 'Monoton', cursive;
+    position: absolute;
+    color: white;
+    font-size: 250%;
+    padding-top: 1%;
+    left: 42%;
+    text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ff00 , 0 0 35px #00ff00 , 0 0 40px #00ff00 , 0 0 50px #00ff00 ;
+    background-color: transparent;
+    border-color: transparent;
+}
+
 #saveButton {
     line-height: 1.5;
     font-family: 'Monoton', cursive;
@@ -294,6 +327,11 @@ input {
         width: 20%;
         height: 84%;
     }
+    #newStorySubmit {
+        top: 83%;
+        left: 34%;
+        font-size: 200%;
+    }
 }
 
 @media only screen and (max-width: 492px){
@@ -304,6 +342,9 @@ input {
         font-size: 125%;
         top: 290%;
         left: 23%;
+    }
+    #example {
+        font-size: 75%;
     }
 }
 
@@ -361,5 +402,8 @@ input {
     }
     body {
         height: 110%;
+    }
+    #newStorySubmit {
+        left: 29%;
     }
 }
