@@ -18,7 +18,10 @@ module.exports = function (app) {
         var inputCount = req.body.inputCount;
         if (isNaN(inputCount)) {
             res.staus(400);
-            res.end();
+            res.render("error", {
+                statusCode: 400,
+                message: "Invalid data"
+            });
             return;
         }
 
@@ -31,7 +34,10 @@ module.exports = function (app) {
             for (var i = 0; i < inputs.length; i++) {
                 if (inputs[i] === "" || inputs[i] === undefined) {
                     res.status(400);
-                    res.end();
+                    res.render("error", {
+                        statusCode: 400,
+                        message: "Invalid data"
+                    });
                     return;
                 }
             }
@@ -45,11 +51,17 @@ module.exports = function (app) {
                 });
             }, function () {
                 res.status(400);
-                res.end();
+                res.render("error", {
+                    statusCode: 400,
+                    message: "Invalid data"
+                });
             });
         }, function (err) {
             res.status(400);
-            res.end();
+            res.render("error", {
+                statusCode: 400,
+                message: "Invalid data"
+            });
         });
     });
 
@@ -72,7 +84,10 @@ module.exports = function (app) {
         if (!req.body.story || req.body.story.length > 750)
         {
             res.status(400);
-            res.end();
+            res.render("error", {
+                statusCode: 400,
+                message: "Invalid data"
+            });
             return;
         }
 
@@ -93,7 +108,18 @@ module.exports = function (app) {
             });
         }, function (err) {
             res.status(500);
-            res.end();
+            res.render("error", {
+                statusCode: 500,
+                message: "Server error"
+            });
+        });
+    });
+
+    app.get("/testError/:code", function (req, res) {
+        //res.status(req.params.code);
+        res.render("error", {
+            statusCode: req.params.code,
+            message: "Test"
         });
     });
 
@@ -106,15 +132,24 @@ module.exports = function (app) {
                     });
                 }, function () {
                     res.status(500);
-                    res.end();
+                    res.render("error", {
+                        statusCode: 500,
+                        message: "Server error"
+                    });
                 });
             }, function (err) {
                 res.status(500);
-                res.end();
+                res.render("error", {
+                    statusCode: 500,
+                    message: "Server error"
+                });
             });
         }, function (err) {
             res.status(400);
-            res.end();
+            res.render("error", {
+                statusCode: 400,
+                message: "Invalid data"
+            });
         })
     });
 }
