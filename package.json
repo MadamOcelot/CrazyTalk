@@ -14,11 +14,7 @@
   "license": "ISC",
   "jest": {
     "automock": false,
-    "verbose": true,
-    "collectCoverageFrom": [
-      "server.js"
-    ],
-    "collectCoverage": true
+    "verbose": true
   },
   "bugs": {
     "url": "https://github.com/MadamOcelot/CrazyTalk/issues"
