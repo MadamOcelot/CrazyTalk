@@ -7,7 +7,7 @@ body {
     background-color: black;
     border: 5px solid white;
     height: 90%;
-    box-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
     margin: 3%;
     animation: pulse 3s infinite;
     line-height: 0.5;
@@ -15,10 +15,10 @@ body {
   
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+        box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
     }
     50% {
-        box-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff009d , 0 0 70px #ff009d , 0 0 80px #ff009d , 0 0 100px #ff009d ;
+        box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #ff009d, 0 0 70px #ff009d, 0 0 80px #ff009d, 0 0 100px #ff009d ;
     }
   }
 
@@ -36,12 +36,12 @@ body {
     box-sizing: border-box;
     padding: 10px;
     border: none;
-    color: rgba(255,255,255,1);
+    color: white;
     text-decoration: normal;
     -o-text-overflow: clip;
     text-overflow: clip;
     white-space: pre;
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
     -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -49,7 +49,7 @@ body {
 }
       
 #crazyHead:hover {
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff009d , 0 0 70px #ff009d , 0 0 80px #ff009d , 0 0 100px #ff009d ;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #ff009d, 0 0 70px #ff009d, 0 0 80px #ff009d, 0 0 100px #ff009d ;
 
 }
 
@@ -62,12 +62,12 @@ body {
     box-sizing: border-box;
     padding: 10px;
     border: none;
-    color: rgba(255,255,255,1);
+    color: white;
     text-decoration: normal;
     -o-text-overflow: clip;
     text-overflow: clip;
     white-space: pre;
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff009d , 0 0 70px #ff009d , 0 0 80px #ff009d , 0 0 100px #ff009d ;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #ff009d, 0 0 70px #ff009d, 0 0 80px #ff009d, 0 0 100px #ff009d ;
     -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -75,7 +75,7 @@ body {
 }
           
 #talk:hover {
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
 }
 
 #crazy {
@@ -87,12 +87,12 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
-    color: rgba(255,255,255,1);
+    color: white;
     text-decoration: normal;
     -o-text-overflow: clip;
     text-overflow: clip;
     white-space: pre;
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ff00 , 0 0 70px #00ff00 , 0 0 80px #00ff00 , 0 0 100px #00ff00 ;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00, 0 0 100px #00ff00 ;
     -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -100,7 +100,7 @@ body {
 }
 
 #crazy:hover {
-    text-shadow: -3px 0 0 rgb(250, 0, 54) , -6px 0 0 rgb(226,91,14) , -9px 0 0 rgb(245,221,8) , -12px 0 0 rgb(5,148,68) , -15px 0 0 rgb(2,135,206) , -18px 0 0 rgb(4,77,145) , -21px 0 0 rgb(42,21,113) ;
+    text-shadow: -3px 0 0 rgb(250, 0, 54), -6px 0 0 rgb(226,91,14), -9px 0 0 rgb(245,221,8), -12px 0 0 rgb(5,148,68), -15px 0 0 rgb(2,135,206), -18px 0 0 rgb(4,77,145), -21px 0 0 rgb(42,21,113) ;
     -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -moz-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -170,7 +170,7 @@ input {
     padding-top: 1%;
     top: 126%;
     left: 42%;
-    text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ff00 , 0 0 35px #00ff00 , 0 0 40px #00ff00 , 0 0 50px #00ff00 ;
+    text-shadow: 0 0 18px white, 0 0 0 white, 0 0 0 white, 0 0 20px #00ff00, 0 0 35px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
     background-color: transparent;
     border-color: transparent;
 }
@@ -191,7 +191,6 @@ input {
     color: white;
     font-size: 100%;
     line-height: 2;
-
 }
 
 #newStorySubmit {
@@ -203,7 +202,7 @@ input {
     font-size: 250%;
     padding-top: 1%;
     left: 42%;
-    text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ff00 , 0 0 35px #00ff00 , 0 0 40px #00ff00 , 0 0 50px #00ff00 ;
+    text-shadow: 0 0 18px white, 0 0 0 white, 0 0 0 white, 0 0 20px #00ff00, 0 0 35px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
     background-color: transparent;
     border-color: transparent;
 }
@@ -217,7 +216,7 @@ input {
     padding-top: 1%;
     top: 76%;
     left: 23%;
-    text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ff00 , 0 0 35px #00ff00 , 0 0 40px #00ff00 , 0 0 50px #00ff00 ;
+    text-shadow: 0 0 18px white, 0 0 0 white, 0 0 0 white, 0 0 20px #00ff00, 0 0 35px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
     background-color: transparent;
     border-color: transparent;
 }
@@ -242,7 +241,7 @@ input {
     font-family: 'Monoton', cursive;
     border-color: transparent;
     background-color: transparent;
-    text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #ff009d , 0 0 35px #ff009d , 0 0 40px #ff009d , 0 0 50px #ff009d ;
+    text-shadow: 0 0 18px white, 0 0 0 white, 0 0 0 white, 0 0 20px #ff009d, 0 0 35px #ff009d, 0 0 40px #ff009d, 0 0 50px #ff009d ;
 }
 
 #random {
@@ -252,7 +251,7 @@ input {
     font-family: 'Monoton', cursive;
     border-color: transparent;
     background-color: transparent;
-    text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ffff , 0 0 35px #00ffff , 0 0 40px #00ffff , 0 0 50px #00ffff ;
+    text-shadow: 0 0 18px white, 0 0 0 white, 0 0 0 white, 0 0 20px #00ffff, 0 0 35px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff ;
     position: relative;
     top: 342%;
     left: 35%;
@@ -265,7 +264,7 @@ input {
     font-family: 'Monoton', cursive;
     border-color: transparent;
     background-color: transparent;
-    text-shadow: 0 0 18px rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 0 rgba(255,255,255,1) , 0 0 20px #00ffff , 0 0 35px #00ffff , 0 0 40px #00ffff , 0 0 50px #00ffff ;
+    text-shadow: 0 0 18px white, 0 0 0 white, 0 0 0 white, 0 0 20px #00ffff, 0 0 35px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff ;
     position: relative;
     top: 342%;
     left: 35%;
